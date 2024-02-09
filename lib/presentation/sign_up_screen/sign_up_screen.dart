@@ -15,7 +15,7 @@ class SignUpScreen extends StatelessWidget {
 
   TextEditingController userNamevalueController = TextEditingController();
 
-  TextEditingController editTextController2 = TextEditingController()
+  TextEditingController editTextController2 = TextEditingController();
 
   TextEditingController editTextController3 = TextEditingController();
 
