@@ -48,7 +48,7 @@ class LogiInScreen extends StatelessWidget {
               SizedBox(height: 14.v),
               CustomTextFormField(
                   controller: userNamevalueController,
-                  hintText: "Umwari ornella",
+                  hintText: "Umwari Ornella",
                   borderDecoration: TextFormFieldStyleHelper.fillGrayTL38),
               SizedBox(height: 18.v),
               _buildPasswordStack(context),
@@ -134,7 +134,7 @@ class LogiInScreen extends StatelessWidget {
   }
 
   /// Navigates to the dashboardScreen when the action is triggered.
-  onTapLogIn(BuildContext context) 
+  onTapLogIn(BuildContext context) {
     Navigator.pushNamed(
       context,
       AppRoutes.dashboardScreen,
