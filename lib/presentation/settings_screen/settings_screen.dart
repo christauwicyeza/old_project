@@ -4,7 +4,7 @@ import 'package:taskmanagerfigma_to_flutter/widgets/custom_elevated_button.dart'
 import 'package:taskmanagerfigma_to_flutter/widgets/custom_icon_button.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({Key? key}) : super(key: key)
 
   @override
   Widget build(BuildContext context) {
