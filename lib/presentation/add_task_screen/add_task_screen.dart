@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart'
+import 'package:flutter/material.dart';
 import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
 import 'package:taskmanagerfigma_to_flutter/widgets/app_bar/appbar_leading_iconbutton.dart';
 import 'package:taskmanagerfigma_to_flutter/widgets/app_bar/appbar_subtitle.dart';
