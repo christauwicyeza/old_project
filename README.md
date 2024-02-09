@@ -41,7 +41,7 @@ After successful build, your application structure should look like this:
 ```
 ## Design
 
-For the design specifications of our project, please refer to the following link: [Figma Design File](insert-figma-design-link-here).
+For the design specifications of our project, please refer to the following link: [Figma Design File]https://www.figma.com/proto/BemSdCXpaRSVic4bBYBMhK/TaskManager?type=design&node-id=5-29&t=Wh0kxW2QeEZ1Ismj-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=5%3A29&mode=design.
 
 ## Support
 
