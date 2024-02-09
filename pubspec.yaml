@@ -1,0 +1,48 @@
+name: taskmanagerfigma_to_flutter
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.12.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  cached_network_image: ^3.3.0
+  flutter_svg: ^2.0.9
+  intl: ^0.18.0
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+  fonts: 
+    - family: Irish Grover
+      fonts: 
+        - asset: assets/fonts/IrishGroverRegular.ttf
+          weight: 400
+    - family: Roboto
+      fonts: 
+        - asset: assets/fonts/RobotoRomanBold.ttf
+          weight: 700
+        - asset: assets/fonts/RobotoRomanLight.ttf
+          weight: 300
+        - asset: assets/fonts/RobotoRomanMedium.ttf
+          weight: 500
+        - asset: assets/fonts/RobotoRomanRegular.ttf
+          weight: 400
+    - family: Istok Web
+      fonts: 
+        - asset: assets/fonts/IstokWebRegular.ttf
+          weight: 400
+        - asset: assets/fonts/IstokWebBold.ttf
+          weight: 700
+    - family: McLaren
+      fonts: 
+        - asset: assets/fonts/McLarenRegular.ttf
+          weight: 400
+    - family: Inter
+      fonts: 
+        - asset: assets/fonts/InterBold.ttf
+          weight: 700
