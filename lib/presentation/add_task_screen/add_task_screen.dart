@@ -16,7 +16,7 @@ class AddTaskScreen extends StatelessWidget {
 
   TextEditingController monthController = TextEditingController();
 
-  List<String> dropdownItemList = ["Item christa", "Item Two", "Item Three"];
+  List<String> dropdownItemList = ["Item one", "Item Two", "Item Three"];
 
   @override
   Widget build(BuildContext context) {

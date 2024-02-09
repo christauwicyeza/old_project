@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart'
+import 'package:flutter/material.dart';
 import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
 import 'package:taskmanagerfigma_to_flutter/widgets/custom_icon_button.dart';
 import 'package:taskmanagerfigma_to_flutter/widgets/custom_text_form_field.dart';
