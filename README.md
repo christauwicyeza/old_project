@@ -4,7 +4,7 @@ Welcome to our Task Manager project! This README will guide you through the setu
 
 ## Introduction
 
-Our project is a task manager application designed to help individuals or teams organize, track, and manage their tasks efficiently. Whether you're a solo freelancer juggling multiple projects or a team collaborating on a complex assignment, our task manager provides a user-friendly interface to streamline your workflow. With features like task creation, organization, tracking, collaboration, and notifications, you can stay on top of your tasks and boost your productivity.
+Our project is a task manager application designed to help individuals or teams organize, track, and manage their tasks efficiently. Whether you're a solo freelancer juggling multiple projects or a team collaborating on a complex assignment, our task manager provides a user-friendly interface to streamline your workflow. With features like task creation, organization, tracking, and collaboration you can stay on top of your tasks and boost your productivity.
 
 ## Getting Started
 
@@ -46,10 +46,3 @@ For the design specifications of our project, please refer to the following link
 ## Support
 
 If you encounter any issues or have any questions regarding our project, please feel free to reach out to our support team at [o.mahoro@alustudent.com,c.uwicyeza@alustudent.com,m.umwari@alustudent.com].
-
-## Contribution
-
-We welcome contributions from the community to enhance our project further. If you'd like to contribute, please follow the guidelines provided in the repository.
-
-
-Thank you for choosing our Task Manager! We hope you find it useful and enjoyable.
