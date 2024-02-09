@@ -45,7 +45,7 @@ For the design specifications of our project, please refer to the following link
 
 ## Support
 
-If you encounter any issues or have any questions regarding our project, please feel free to reach out to our support team at [o.mahoro@alustudent.com].
+If you encounter any issues or have any questions regarding our project, please feel free to reach out to our support team at [o.mahoro@alustudent.com,c.uwicyeza@alustudent.com,m.umwari@alustudent.com].
 
 ## Contribution
 
