@@ -13,7 +13,7 @@ class HistoryScreen extends StatelessWidget {
         child: Scaffold(
             body: SizedBox(
                 width: double.maxFinite,
-                child: Column(children: [
+                child: Column(children:, [
                   _buildTitleStack(context),
                   SizedBox(height: 22.v),
                   _buildEmailComponentList(context),
