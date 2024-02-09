@@ -2,7 +2,7 @@ import '../history_screen/widgets/emailcomponentlist_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
 import 'package:taskmanagerfigma_to_flutter/widgets/custom_elevated_button.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_icon_button.dart';
+import 'package:taskmanagerfima_to_flutter/widgets/custom_icon_button.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({Key? key}) : super(key: key);
