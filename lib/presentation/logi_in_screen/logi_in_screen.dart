@@ -134,7 +134,7 @@ class LogiInScreen extends StatelessWidget {
   }
 
   /// Navigates to the dashboardScreen when the action is triggered.
-  onTapLogIn(BuildContext context) {
+  onTapLogIn(BuildContext context) 
     Navigator.pushNamed(
       context,
       AppRoutes.dashboardScreen,
