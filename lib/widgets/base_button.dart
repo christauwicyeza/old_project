@@ -9,7 +9,7 @@ class BaseButton extends StatelessWidget {
     this.buttonStyle,
     this.buttonTextStyle,
     this.isDisabled,
-    this.height,
+    this.height
     this.width,
     this.margin,
     this.alignment,
