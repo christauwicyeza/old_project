@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_icon_button.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_text_form_field.dart';
+import 'package:flutter_task_manager/core/app_export.dart';
+import 'package:flutter_task_manager/widgets/custom_icon_button.dart';
+import 'package:flutter_task_manager/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
 class DashboardScreen extends StatelessWidget {

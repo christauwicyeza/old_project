@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/app_bar/appbar_leading_iconbutton.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/app_bar/appbar_subtitle.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/app_bar/appbar_trailing_image.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/app_bar/custom_app_bar.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_drop_down.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_elevated_button.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_text_form_field.dart';
+import 'package:flutter_task_manager/core/app_export.dart';
+import 'package:flutter_task_manager/widgets/app_bar/appbar_leading_iconbutton.dart';
+import 'package:flutter_task_manager/widgets/app_bar/appbar_subtitle.dart';
+import 'package:flutter_task_manager/widgets/app_bar/appbar_trailing_image.dart';
+import 'package:flutter_task_manager/widgets/app_bar/custom_app_bar.dart';
+import 'package:flutter_task_manager/widgets/custom_drop_down.dart';
+import 'package:flutter_task_manager/widgets/custom_elevated_button.dart';
+import 'package:flutter_task_manager/widgets/custom_text_form_field.dart';
 
 // ignore_for_file: must_be_immutable
 class AddTaskScreen extends StatelessWidget {

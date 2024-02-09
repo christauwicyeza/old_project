@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/base_button.dart';
+import 'package:flutter_task_manager/core/app_export.dart';
+import 'package:flutter_task_manager/widgets/base_button.dart';
 
 class CustomElevatedButton extends BaseButton {
   CustomElevatedButton({

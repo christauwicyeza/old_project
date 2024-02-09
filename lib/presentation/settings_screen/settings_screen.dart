@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_elevated_button.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_icon_button.dart';
+import 'package:flutter_task_manager/core/app_export.dart';
+import 'package:flutter_task_manager/widgets/custom_elevated_button.dart';
+import 'package:flutter_task_manager/widgets/custom_icon_button.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);

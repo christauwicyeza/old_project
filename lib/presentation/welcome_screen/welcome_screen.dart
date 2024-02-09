@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_elevated_button.dart';
+import 'package:flutter_task_manager/core/app_export.dart';
+import 'package:flutter_task_manager/widgets/custom_elevated_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);

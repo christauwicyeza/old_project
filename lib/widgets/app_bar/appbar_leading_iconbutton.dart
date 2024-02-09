@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanagerfigma_to_flutter/core/app_export.dart';
-import 'package:taskmanagerfigma_to_flutter/widgets/custom_icon_button.dart';
+import 'package:flutter_task_manager/core/app_export.dart';
+import 'package:flutter_task_manager/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class AppbarLeadingIconbutton extends StatelessWidget {

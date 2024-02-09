@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:taskmanagerfigma_to_flutter/presentation/welcome_screen/welcome_screen.dart';
-import 'package:taskmanagerfigma_to_flutter/presentation/history_screen/history_screen.dart';
-import 'package:taskmanagerfigma_to_flutter/presentation/settings_screen/settings_screen.dart';
-import 'package:taskmanagerfigma_to_flutter/presentation/sign_up_screen/sign_up_screen.dart';
-import 'package:taskmanagerfigma_to_flutter/presentation/add_task_screen/add_task_screen.dart';
-import 'package:taskmanagerfigma_to_flutter/presentation/logi_in_screen/logi_in_screen.dart';
-import 'package:taskmanagerfigma_to_flutter/presentation/dashboard_screen/dashboard_screen.dart';
-import 'package:taskmanagerfigma_to_flutter/presentation/app_navigation_screen/app_navigation_screen.dart';
+import 'package:flutter_task_manager/presentation/welcome_screen/welcome_screen.dart';
+import 'package:flutter_task_manager/presentation/history_screen/history_screen.dart';
+import 'package:flutter_task_manager/presentation/settings_screen/settings_screen.dart';
+import 'package:flutter_task_manager/presentation/sign_up_screen/sign_up_screen.dart';
+import 'package:flutter_task_manager/presentation/add_task_screen/add_task_screen.dart';
+import 'package:flutter_task_manager/presentation/logi_in_screen/logi_in_screen.dart';
+import 'package:flutter_task_manager/presentation/dashboard_screen/dashboard_screen.dart';
+import 'package:flutter_task_manager/presentation/app_navigation_screen/app_navigation_screen.dart';
 
 class AppRoutes {
   static const String welcomeScreen = '/welcome_screen';
