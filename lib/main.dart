@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, deviceType) {
         return MaterialApp(
           theme: theme,
-          title: 'taskmanagerfigma_to_flutter',
+          title: 'flutter',
           debugShowCheckedModeBanner: false,
           initialRoute: AppRoutes.welcomeScreen,
           routes: AppRoutes.routes,
