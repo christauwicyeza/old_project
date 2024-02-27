@@ -49,3 +49,6 @@ flutter:
       fonts: 
         - asset: assets/fonts/InterBold.ttf
           weight: 700
+analyzer:
+  errors:
+    unused_import: ignore
