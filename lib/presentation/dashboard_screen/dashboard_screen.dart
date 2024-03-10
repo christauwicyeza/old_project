@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_task_manager/core/app_export.dart';
-import 'package:flutter_task_manager/widgets/custom_icon_button.dart';
-import 'package:flutter_task_manager/widgets/custom_text_form_field.dart';
+
+import '../../routes/app_routes.dart';
 
 class DashboardScreen extends StatefulWidget {
   DashboardScreen({Key? key}) : super(key: key);
@@ -45,18 +45,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   labelText: 'Title',
                   filled: true,
                   fillColor: Colors.grey,
-                  border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blue)),
                 ),
                 onChanged: (value) => title = value,
               ),
               SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
-                  
                   labelText: 'Details',
                   filled: true,
                   fillColor: Colors.grey,
-                  border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blue)),
                 ),
                 onChanged: (value) => details = value,
               ),
@@ -76,13 +77,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     'task_name': title,
                     'task_details': details,
                     'date': Timestamp.now(),
+                    'user_uid': FirebaseAuth.instance.currentUser!.uid,
                   });
                   Navigator.of(context).pop();
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('Please enter title and details.', style: TextStyle(color: Colors.blue)),
-                      backgroundColor: Colors.white, // Set the background color of the snack bar
+                      content: Text('Please enter title and details.',
+                          style: TextStyle(color: Colors.blue)),
+                      backgroundColor: Colors
+                          .white, // Set the background color of the snack bar
                     ),
                   );
                 }
@@ -95,7 +99,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  Future<void> _editTask(String taskId, String currentTitle, String currentDetails) async {
+  Future<void> _editTask(
+      String taskId, String currentTitle, String currentDetails) async {
     String newTitle = currentTitle;
     String newDetails = currentDetails;
 
@@ -113,7 +118,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   labelText: 'Title',
                   filled: true,
                   fillColor: Colors.grey,
-                  border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blue)),
                 ),
                 onChanged: (value) => newTitle = value,
                 controller: TextEditingController(text: currentTitle),
@@ -124,7 +130,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   labelText: 'Details',
                   filled: true,
                   fillColor: Colors.grey,
-                  border: OutlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blue)),
                 ),
                 onChanged: (value) => newDetails = value,
                 controller: TextEditingController(text: currentDetails),
@@ -149,8 +156,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('Please enter title and details.', style: TextStyle(color: Colors.blue)),
-                      backgroundColor: Colors.white, // Set the background color of the snack bar
+                      content: Text('Please enter title and details.',
+                          style: TextStyle(color: Colors.blue)),
+                      backgroundColor: Colors
+                          .white, // Set the background color of the snack bar
                     ),
                   );
                 }
@@ -167,19 +176,56 @@ class _DashboardScreenState extends State<DashboardScreen> {
     await db.collection('Tasks').doc(taskId).delete();
   }
 
+  Future<void> logout() async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushNamed(context, AppRoutes.logiInScreen);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
-        title: Text("Task Manager", style: TextStyle(fontSize: 24),),
+        title: Text(
+          "Task Manager",
+          style: TextStyle(fontSize: 24),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  backgroundColor: Colors.black45,
+                  title: Text("Logout"),
+                  content: Text("Are you sure you want to logout?"),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: Text("Cancel"),
+                    ),
+                    TextButton(
+                      onPressed: () => logout(),
+                      child: Text("Logout"),
+                    ),
+                  ],
+                ),
+              );
+            },
+            child: Icon(
+              Icons.exit_to_app_rounded,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
       body: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
         stream: taskStream,
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(
-              child: Text('Error: ${snapshot.error}', style: TextStyle(color: Colors.red)),
+              child: Text('Error: ${snapshot.error}',
+                  style: TextStyle(color: Colors.red)),
             );
           }
 
@@ -189,7 +235,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
             );
           }
 
-          final tasks = snapshot.data!.docs.map((doc) => doc.data()).toList();
+          final tasks = snapshot.data!.docs
+              .where((doc) =>
+                  doc['user_uid'] == FirebaseAuth.instance.currentUser!.uid)
+              .map((doc) => doc.data())
+              .toList();
 
           return ListView.builder(
             itemCount: tasks.length,
@@ -222,7 +272,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text("${task["task_name"]}", style: TextStyle(color: Colors.white)),
+                                Text("${task["task_name"]}",
+                                    style: TextStyle(color: Colors.white)),
                                 Row(
                                   children: [
                                     IconButton(
@@ -233,13 +284,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                           task["task_details"],
                                         );
                                       },
-                                      icon: Icon(Icons.edit, color: Colors.white),
+                                      icon:
+                                          Icon(Icons.edit, color: Colors.white),
                                     ),
                                     IconButton(
                                       onPressed: () async {
-                                        await _deleteTask(snapshot.data!.docs[index].id);
+                                        await _deleteTask(
+                                            snapshot.data!.docs[index].id);
                                       },
-                                      icon: Icon(Icons.delete, color: Colors.white),
+                                      icon: Icon(Icons.delete,
+                                          color: Colors.white),
                                     ),
                                   ],
                                 ),
@@ -251,7 +305,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           width: MediaQuery.of(context).size.width,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("${task["task_details"]}", style: TextStyle(color: Colors.white)),
+                            child: Text("${task["task_details"]}",
+                                style: TextStyle(color: Colors.white)),
                           ),
                         ),
                       ],

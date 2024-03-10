@@ -12,7 +12,12 @@
           "package_name": "com.taskmanagerflutter.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "137321339537-2ittfgrumuvj18hk16ahvcio2fgh4rmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDErFfWkn9s7kRJuF23-mc5Q6lCPsNJx-8"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137321339537-2ittfgrumuvj18hk16ahvcio2fgh4rmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
