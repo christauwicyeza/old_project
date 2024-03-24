@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:flutter/scheduler.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_task_manager/core/app_export.dart';
+import 'firebase_options.dart';
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, deviceType) {
         return MaterialApp(
           theme: theme,
-          title: 'flutter',
+          title: 'taskmanagerfigma_to_flutter',
           debugShowCheckedModeBanner: false,
           initialRoute: AppRoutes.welcomeScreen,
           routes: AppRoutes.routes,

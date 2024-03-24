@@ -2,16 +2,23 @@ name: flutter_task_manager
 description: A new Flutter project.
 version: 1.0.0+1
 environment: 
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=3.2.2 <4.0.0'
 dependencies: 
   flutter: 
     sdk: flutter
   cached_network_image: ^3.3.0
   flutter_svg: ^2.0.9
   intl: ^0.19.0
+  firebase_core: ^2.25.4
+  cloud_firestore: ^4.15.5
+  firebase_auth: ^4.17.8
+  google_sign_in: ^6.2.1
+  fluttertoast: ^8.2.4
+
 dev_dependencies: 
   flutter_test: 
     sdk: flutter
+  flutter_lints: ^3.0.1
 flutter: 
   uses-material-design: true
   assets: 
@@ -46,3 +53,6 @@ flutter:
       fonts: 
         - asset: assets/fonts/InterBold.ttf
           weight: 700
+analyzer:
+  errors:
+    unused_import: ignore
